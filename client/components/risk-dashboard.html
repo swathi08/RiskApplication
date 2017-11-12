@@ -1,0 +1,14 @@
+<template name="riskDashboardForm">
+
+<form> 
+    <legend>Risks Dashboard</legend>
+   <div class="poll well well-lg">
+    {{ #each indexedArray risks }}
+        <a href="#" class="vote btn btn-primary btn-block">
+            <span class="text">{{ riskReference }}</span>
+        </a>
+    {{ /each }}
+</div>
+</form>
+
+</template>

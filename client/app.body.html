@@ -1,0 +1,14 @@
+<body>
+<ul>
+  <li><a class="riskdashboard active" href="#">Risk Dashboard</a></li>
+ <li><a class="newrisk" href="#">Build New Risk</a></li> 
+</ul>
+  <!-- PULL IN THE POLL CREATION FORM -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        {{ > Template.dynamic template=template_name }} 
+      </div>
+    </div>
+  </div>  
+</body>

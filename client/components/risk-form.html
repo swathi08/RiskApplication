@@ -1,0 +1,54 @@
+<template name="riskForm">
+
+<form> 
+    <legend>Build New Risk</legend>
+    <div class="form-group">
+        <label>Contract Version</label>
+        <select name="contractversion" class="form-control">
+            <option>Pick a placing contract version</option>
+            {{#each contracts}}
+            <option value="{{text}}">{{text}}</option>
+        {{/each}}
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Risk Reference</label>
+        <input type="text" name="riskreference" class="form-control" placeholder="Enter a reference name">
+    </div>
+     <div class="form-group">
+        <label>Contract Type (Type of Insurance Required)</label>
+        <select name="contractType" class="form-control">
+            <option >Pick a type</option>
+            {{#each contractTypes}}
+            <option value="{{text}}">{{text}}</option>
+        {{/each}}
+        </select>
+    </div> 
+    <div class="form-group">
+        <label>Peril Coverage(Authorized classes of Business and Coverage)</label>
+        <select name="businessClass" class="form-control">
+            <option>Pick a business class</option>
+            {{#each businessClass}}
+            <option value="{{text}}">{{text}}</option>
+        {{/each}}
+        </select>
+    </div>
+     <div class="form-group">
+        <label>Territory</label>
+        <select name="territory" class="form-control">
+            <option>Pick a territory</option>
+            {{#each territories}}
+            <option value="{{text}}">{{text}}</option>
+        {{/each}}
+        </select>
+    </div> 
+    <div class="form-group">
+        <label>Risk Value in USD</label>
+        <input type="text" name="riskvalue" class="form-control" placeholder="Enter risk value">
+    </div>
+
+    <button type="submit" class="btn btn-lg btn-primary btn-block">Create New Risk</button>
+</form>
+
+</template>
